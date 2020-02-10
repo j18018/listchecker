@@ -1,6 +1,7 @@
 package com.example.listchecker
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -25,12 +26,10 @@ class toadd:AppCompatActivity(){
     }
 
     fun toaddevent(){
-        Log.d("TAG","ボタンが押されまs値")
+        Log.d("TAG","ボタンが押されました")
         var post: AsyncHttp = AsyncHttp(addtitle)
         post.execute()
-        /*
-        toget.kt
-        get:AsyncHttp =
-         */
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

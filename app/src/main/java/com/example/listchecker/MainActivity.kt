@@ -18,28 +18,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("TAG","onCreate")
-        // ListViewに表示するリスト項目をArrayListで準備する
-        // ListViewに表示するリスト項目をArrayListで準備する
-        var data = ArrayList<Any>()
-        data.add("国語")
-        data.add("社会")
-        data.add("算数")
-        data.add("理科")
-        data.add("生活")
-        data.add("音楽")
-        data.add("図画工作")
-        data.add("家庭")
-        data.add("体育")
-        var post: AsyncHttp_get = AsyncHttp_get()
-        post.execute().toString()
-        textView.text = (title)
-        data.add(title)
 
-        val adapter: ArrayAdapter<*> =
-            ArrayAdapter(this, android.R.layout.simple_list_item_1, data)
 
-        listView.setAdapter(adapter)
+        webView.loadUrl("http://10.206.1.80/todo_upload/page.php")
+
+        //listviewで表示したかった
+        /*val adapter: ArrayAdapter<*> =
+            ArrayAdapter(this, android.R.layout.simple_list_item_1, data)*/
+
+        //listView.setAdapter(adapter)
 
         button.setOnClickListener{
             val intent = Intent(this, toadd::class.java)
