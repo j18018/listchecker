@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">list checker</string>
+    <string name="title">タイトルを入力してください</string>
+    <string name="confirm">確定</string>
+</resources>
